@@ -1,7 +1,7 @@
-(ns testreagent.se2
+ (ns testreagent.se2
   (:require-macros [testreagent.se2 :refer [go-loop-sub]]
                    [cljs.core.async.macros :refer [go go-loop]])
-    (:require [reagent.core :as reagent :refer [atom]]
+  (:require [reagent.core :as reagent :refer [atom]]
             [cljs.core.async :as async]))
 
 (enable-console-print!)
@@ -80,6 +80,10 @@
   (async/put! event-bus [:reset-game])
   (reagent/render-component
    [guess-number-game event-bus]
-   (.-body js/document)))
+
+  (.getElementById js/document "app1")
+   
+  ;(.-body js/document)
+  ))
 
 (run)
