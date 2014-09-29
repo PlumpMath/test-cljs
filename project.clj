@@ -6,18 +6,12 @@
   :dependencies [[reagent "0.4.2"]
                  [org.clojure/clojure "1.6.0"]
                  [org.clojure/clojurescript "0.0-2342"]
-                 [org.clojure/core.async "0.1.338.0-5c5012-alpha"]
-
-
-
+                 [org.clojure/core.async "0.1.346.0-17112a-alpha"]
+                 
                  [om "0.7.0"]
                  [sablono "0.2.20"]
                  [cljs-ajax "0.2.6"]
-                 
-                 ;[datascript "0.4.1"]
-                 ;[sablono "0.2.22"]
-                 ;[com.facebook/react "0.11.2"]
-                 ]
+                                  ]
   :plugins [[lein-cljsbuild "1.0.3"]]
   :hooks [leiningen.cljsbuild]
   :profiles {:prod {:cljsbuild
