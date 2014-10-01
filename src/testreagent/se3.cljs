@@ -27,9 +27,9 @@
       (let [event-bus (om/get-shared owner :event-bus)]
         (html
          [:div
-          "Rate eine Zahl zwischen 1 und 100 "
+          "Guess a number between 1 and 100"
           [:p]
-          "Dein Tipp:"
+          "Dein Tipp:" 
           [:input {:type "number"
                    :value (:my-guess game-model)
                    :disabled (:game-over? game-model)
@@ -40,7 +40,7 @@
           [:button {:type "button"
                     :disabled (:game-over? game-model)
                     :on-click (fn [e] (async/put! event-bus [:make-guess]))}
-           "Rate!"]
+           "Guess!"]
           [:button {:type "button"
                     :disabled (not (:game-over? game-model))
                     :on-click (fn [e] (async/put! event-bus [:reset-game]))}
