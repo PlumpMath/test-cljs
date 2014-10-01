@@ -29,7 +29,7 @@
          [:div
           "Guess a number between 1 and 100"
           [:p]
-          "Dein Tipp:" 
+          "Your guess:" 
           [:input {:type "number"
                    :value (:my-guess game-model)
                    :disabled (:game-over? game-model)
