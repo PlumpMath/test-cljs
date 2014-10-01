@@ -30,7 +30,7 @@
                                                          (- 7 number-of-guesses)
                                                          " guesses left. Your attempts so far: " (sort  (:my-guesses model)))
        (< (:secret-number model) (:my-guess model)) (str (:my-guess model) " is to big! Still " (- 7 number-of-guesses) " attempts left. "
-                                                         "Yout attempts so far: " (sort (:my-guesses model)))))))
+                                                         "Your attempts so far: " (sort (:my-guesses model)))))))
 
 (defn make-guess
   "Returns a new model incorporating the value to the key :my-guess of the old-model in the set under the key :my-guesses.
